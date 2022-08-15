@@ -4,6 +4,9 @@ const hourLine = document.getElementById('hour-line');
 
 const setDate = () =>{
     const currentDate = new Date();
+
+    document.getElementById('date-container').innerText = `Date: ${currentDate.getDate()} - ${currentDate.getMonth()+1} - ${currentDate.getFullYear()}`;
+    document.getElementById('time-container').innerText = `Time: ${currentDate.getHours()} : ${currentDate.getMinutes()} : ${currentDate.getSeconds()}`;
     
     const seconds = currentDate.getSeconds();
     const secondDeg = ((seconds/60)*360) + 90;
